@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Depot</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+ <body class=class='<%= controller.controller_name %>'>
+    <div class="page-header">
+      <h2>Depot</h2>
+    </div>
+    <nav class="navbar navbar-default">
+      <ul <ul class="nav nav-pills">
+        <li><a href="/">Home</a></li>
+        <li><a href="/">Products</a></li>
+      <ul>
+    <%= yield %>
+  </body>
+</html>
