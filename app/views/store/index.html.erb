@@ -18,7 +18,7 @@
       <tr>
         <td><%= product.title %></td>
         <td><%= sanitize(product.description) %></td>
-        <td><%= image_tag(product.image_url, class: 'list_image') %>
+        <td><%= image_tag(product.image_url, class: 'list_image') %></td>
         <td><%= number_to_currency(product.price) %></td>
         <td><%= button_to 'Add to Cart', line_items_path(product_id: product) %></td>
       </tr>

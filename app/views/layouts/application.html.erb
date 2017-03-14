@@ -6,6 +6,7 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  
   </head>
 
  <body class=class='<%= controller.controller_name %>'>
@@ -16,7 +17,16 @@
       <ul <ul class="nav nav-pills">
         <li><a href="/">Home</a></li>
         <li><a href="/">Products</a></li>
-      <ul>
+         <% if session[:user_id] %>
+         <li><%= link_to 'Orders', orders_path %></li>
+         <li><%= link_to 'Products', products_path %></li>
+         <li><%= link_to 'Users', users_path %></li>
+         <li><button type="button" class="btn btn-sm btn-danger"><%= link_to 'Logout', logout_path, method: :delete %></li>
+      </ul>
+   
+      <% end %>  
     <%= yield %>
+ 
   </body>
+  
 </html>

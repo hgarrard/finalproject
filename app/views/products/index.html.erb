@@ -17,9 +17,9 @@
     <% @products.each do |product| %>
       <tr>
         <td><%= product.title %></td>
-        <td><%= product.description %></td>
-        <td><%= product.image_url %></td>
-        <td><%= product.price %></td>
+        <td><%= sanitize(product.description) %></td>
+        <td><%= image_tag(product.image_url, class: 'list_image') %>
+        <td><%= number_to_currency(product.price) %></td>
         <td><button type="button" class="btn btn-sm btn-info"><%= link_to 'Show', product %></td>
         <td><button type="button" class="btn btn-sm btn-warning"><%= link_to 'Edit', edit_product_path(product) %></td>
         <td><button type="button" class="btn btn-sm btn-danger"><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -30,4 +30,4 @@
 
 <br>
 
-<%= link_to 'New Product', new_product_path , class:"btn btn-lg btn-success" %>
+<%= link_to 'New Product', new_product_path , class:"btn btn-md btn-success" %>

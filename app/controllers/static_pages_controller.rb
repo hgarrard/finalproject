@@ -1,5 +1,5 @@
-class StaticPagesController < ApplicationController
-def bespoke
-end
+skip_before_action :authorize
+    def home
+    end
  
-end
+
