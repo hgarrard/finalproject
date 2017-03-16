@@ -7,7 +7,7 @@ Product.create(title: '2014 Mark West Pinot Noir',
       </p>},
   image_url: 'markwest.jpg',
   price: 8.99)
-
+# . . .
 Product.create(title: '2014 Apothic Red',
   description:
     %{<p>
