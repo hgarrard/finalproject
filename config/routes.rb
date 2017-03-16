@@ -4,6 +4,9 @@ Rails.application.routes.draw do
   get 'login' => :new
   post 'login' => :create
   delete 'logout' => :destroy
+  get 'static_pages/home'
+  get 'static_pages/help'
+  get 'static_pages/ads'
 end
 
   resources :users
